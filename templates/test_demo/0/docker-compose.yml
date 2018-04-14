@@ -1,0 +1,14 @@
+version: '2'
+services:
+  elk:
+     image: 10.0.0.96:5000/library/elk:v1
+     hostname: elk
+     ports:
+       - "5601:5601"
+       - "9200:9200"
+       - "9300:9300"
+       - "5044:5044"
+     privileged: true
+     volumes:
+       - /var/data/elk:/var/lib/elasticsearch
+     tty: true
