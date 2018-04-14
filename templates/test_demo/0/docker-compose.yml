@@ -10,5 +10,5 @@ services:
        - "5044:5044"
      privileged: true
      volumes:
-       - /var/data/elk:/var/lib/elasticsearch
+       - /demo/node/elk:/var/lib/elasticsearch
      tty: true
