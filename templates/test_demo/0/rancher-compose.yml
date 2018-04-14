@@ -9,12 +9,5 @@ services:
   elk:
     scale: 1
     start_on_create: true
-    health_check:
-      healthy_threshold: 1
-      response_timeout: 2000
-      port: 9200
-      unhealthy_threshold: 3
-      interval: 2000
-      strategy: recreate
     labels:
       io.rancher.container.requested_ip: "10.42.2.210"
